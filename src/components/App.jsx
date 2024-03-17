@@ -1,16 +1,14 @@
+import React, { useState } from 'react';
+import Searchbar from './Searchbar';
+
+import './styles.css';
+
 export const App = () => {
+  const [ , setSearchedImages] = useState([]);
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <section>
+      <Searchbar setSearchedImages={setSearchedImages} />
+    </section>
   );
 };
